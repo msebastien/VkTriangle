@@ -1,2 +1,2 @@
-# VulkanTest
-Vulkan triangle app
+# VkTriangle
+Personal experiment with the Vulkan graphics API
