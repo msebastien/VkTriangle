@@ -1,0 +1,38 @@
+{
+    "env": {
+        "GCC_VERSION": "9.2.1",
+        "VULKAN_SDK_VERSION": "1.1.130.0"
+    },
+    "configurations": [
+        {
+            "name": "Linux",
+            "browse": {
+                "path": [
+                    "/usr/include/c++/${GCC_VERSION}",
+                    "/usr/include/x86_64-linux-gnu/c++/${GCC_VERSION}", 
+                    "/usr/include",
+                    "/usr/local/include",
+                    "/usr/lib/gcc/x86_64-pc-linux-gnu/${GCC_VERSION}/include",
+                    "${env:HOME}/vulkan/${VULKAN_SDK_VERSION}/x86_64/include",
+                    "${workspaceFolder}/include"
+                ],
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "includePath": [
+                "/usr/include/c++/${GCC_VERSION}",
+                "/usr/include/x86_64-linux-gnu/c++/${GCC_VERSION}", 
+                "/usr/include",
+                "/usr/local/include",
+                "/usr/lib/gcc/x86_64-pc-linux-gnu/${GCC_VERSION}/include",
+                "${env:HOME}/vulkan/${VULKAN_SDK_VERSION}/x86_64/include",
+                "${workspaceFolder}/include"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/g++",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-x64"
+        }
+    ],
+    "version": 4
+}

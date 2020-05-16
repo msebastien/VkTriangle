@@ -1,0 +1,33 @@
+{
+    // Utilisez IntelliSense pour en savoir plus sur les attributs possibles.
+    // Pointez pour afficher la description des attributs existants.
+    // Pour plus d'informations, visitez : https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Hello Triangle app (vulkan)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/vk_hello_triangle",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [
+                {"name": "VULKAN_SDK", "value": "${env:HOME}/vulkan/${env:VULKAN_SDK_VERSION}/x86_64"},
+                {"name": "LD_LIBRARY_PATH", "value": "${env:VULKAN_SDK}/lib"},
+                {"name": "VK_LAYER_PATH", "value": "${env:VULKAN_SDK}/etc/vulkan/explicit_layer.d"}
+            ],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Activer l'impression en mode Pretty pour gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build",
+            "miDebuggerPath": "/usr/bin/gdb"
+        }
+    ]
+}
